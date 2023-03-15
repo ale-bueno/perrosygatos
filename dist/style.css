@@ -1,0 +1,328 @@
+/*---EXTERIOR DE CALCULADORA---*/
+
+.vsaida {
+  height: 20px;
+  width: 50%;
+  margin: 10px 20px;
+  border: #555 2px solid;
+  }
+
+.arriba{
+  border-radius:5px;
+  border:2px #666;
+  padding:5px 5px 5px 5px;
+  margin:0px auto;
+  background: #999;
+    
+}
+
+.calc{gap:2px;}
+
+/*---DISEÑO DE TECLA---*/
+.tecla{
+  background: #CCC;
+  text-align:center;
+  font-family:verdana, sanserif;
+  border-radius:5px;
+  border: 3px solid;
+  border-top-color: #eee;
+  border-left-color: #eee;
+  border-bottom-color:#666;
+  border-right-color:#666;
+}
+
+/*---EFECTO TOCAR TECLA---*/
+.tecla:hover{background:#eee}
+
+.tecla:active{background: #bbb;
+  border-top-color: #666;
+  border-left-color: #666;
+  border-bottom-color:#ccc;
+  border-right-color:#ccc;
+  scale:0.95;
+}
+
+/*------GRID--------*/
+.calc {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-areas:
+    "a b c d"
+    "e f g h"
+    "i j k p"
+    "m n o p";
+}
+.n7{grid-area:a;}   /*linea 1*/
+.n8{grid-area:b;}
+.n9{grid-area:c;}
+.limpiar{grid-area:d;}
+
+.n4{grid-area:e;}  /*linea 2*/
+.n5{grid-area:f;}
+.n6{grid-area:g;}
+.limpiar{grid-area:h;}
+
+.n1{grid-area:i;}  /*linea 3*/
+.n2{grid-area:j;}
+.n3{grid-area:k;}
+.enter{grid-area:p;}
+
+.mas{grid-area:m;}  /*linea 4*/
+.n0{grid-area:n;}
+.coma{grid-area:o;}
+/*^^^^fin del GRID^^^^*/
+
+/*--boton de aceptar-----*/
+.aceptar{
+  border:3px green solid;
+  border-radius:50%;
+  color:green;
+  height:30px;
+  width:30px; 
+}
+
+/*--boton de cancelar-----*/
+.cancelar{
+  border:3px red solid;
+  border-radius:50%;
+  color:red;
+  height:30px;
+  width:30px; }
+
+.visor{ 
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+/*filter:alpha (opacity=50);*/
+
+
+.todo{
+  background: darkgrey;
+  padding: 10px;}
+
+.bloque{
+  padding: 10px;
+  margin: 1px;
+  
+  text-align:center;
+  font-family:verdana, sans-serif;
+  font-weight:bold ;
+}
+
+.bloque{
+background: #999;
+box-shadow: 1px 1px 2px #555;
+transition:.6s;}
+
+.bloque:hover{
+ scale: 1.05;
+  background: lightgray;
+box-shadow: 1px 1px 9px #111;}
+
+.header{
+  background:#fac157;
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;  
+  height:25px;
+   }
+h2,h3,ul{
+  position:relative;
+  top:-20px;
+  
+}
+
+h2{color:#009fd9;
+  order: 0;
+}
+ul{color:black;
+  font-size:10px;
+   }
+
+h3{
+  background:#009fd9;
+  color:#fff;
+  height:30px;
+  width:30px;
+  border-radius:50%;
+ }
+
+.footer{
+  background:#fac157;
+}
+
+.calculadora{ max-width:100%;
+height:180px;}
+
+
+
+/*------GRID--------*/
+.todo {
+  display: grid;
+  grid-template-columns:1fr 1fr;
+  grid-template-rows:repeat(12,1fr);
+  list-style:none;
+  padding-left: 10px;
+}
+.header{
+  grid-column-start:1;
+  grid-row-start:1;
+  grid-column-end:3;
+  grid-row-end:2;  
+}
+
+.footer{
+  grid-column-start:1;
+  grid-row-start:12;
+  grid-column-end:3;
+  grid-row-end:13;  
+  
+}
+
+.cuenta{
+  grid-column-start:1;
+  grid-row-start:2;
+  grid-column-end:2;
+  grid-row-end:8;  
+}
+
+.main{
+  grid-column-start:2;
+  grid-row-start:2;
+  grid-column-end:3;
+  grid-row-end:12; 
+}
+
+ .calculadora{
+  grid-column-start:1;
+  grid-row-start:8;
+  grid-column-end:2;
+  grid-row-end:12;
+}
+ 
+  h4{
+    background: #ddd;
+    border: 2px solid #aaa;
+    margin: 2px;
+    text-align: left;
+    padding-left: 10px;}
+    
+    p{
+      text-align:left;
+      font-size:12px;
+            
+}
+
+p:hover{ 
+background: #bbb;}
+
+      hr {
+  height: 1px;
+  background-color: #eee;
+}
+#servido{
+  border:3px solid #eee;
+    border-radius: 2px;
+  padding-left:10px;
+  height:200px;
+  width: 75%;
+  margin-top:0;
+  overflow:scroll;
+  background: #fff;
+  
+ }
+#ticket{
+  display: flex;
+  flex-direction: row;
+  
+}
+
+#comensales,#mesa{
+  border:#888 1px solid;
+  margin:5px;
+  height:28%;
+  max-width: 100%;
+  background: #ddd;
+  aling-self:flex-start;
+}
+  
+  #comensales:hover,#mesa:hover{
+    background: #eee;
+  border:#888 1px solid;
+  }
+  
+    
+    #comensales:active,#mesa:active{background: #aaa;
+  border-top-color: #666;
+  border-left-color: #666;
+  border-bottom-color:#ccc;
+  border-right-color:#ccc;
+  scale:0.95;
+    
+    
+    
+    
+  }
+#persona{
+  width:70%;
+    }
+#iconmesa{
+  width:90%;
+}
+
+.bloque.cuenta{
+  height:275px;
+    
+}
+
+
+
+
+
+
+ 
+.oferta{
+  background: #555;
+  border: 5px solid #777;
+  border-radius: 10px;
+  width:150px;
+  height:80px;
+  display:flex;
+    
+    
+}
+.inventario{
+   display: flex;
+  flex-direction:row;
+  flex-wrap:wrap;
+  gap:10px;
+  
+   }
+
+.oferta h2,
+.oferta img{ width: 50%;}
+
+.oferta:hover {
+  border: 5px solid #111;
+}
+
+img{
+  width:150px;
+  aspect-ratio:1/1;
+  object-fit: contain;
+  background: white;
+}
+
+.inventario{
+  object-fit:content;
+  overflow:scroll;
+  height:480px;
+  width:100%;
+  
+  
+ 
+  
+}
